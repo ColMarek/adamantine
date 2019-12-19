@@ -17,7 +17,7 @@ class AdamantineOre : OreBlock(
         const val LABEL = "adamantine_ore"
 
         // Block properties
-        const val MINING_LEVEL = 3
+        const val MINING_LEVEL = 2
         const val LIGHT_LEVEL = 3
         const val HARDNESS = 50f
         const val RESISTANCE = 1200f
