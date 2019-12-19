@@ -1,6 +1,7 @@
 package com.colmarek.adamantine
 
 import com.colmarek.adamantine.blocks.AdamantineOre
+import com.colmarek.adamantine.items.AdamantineIngot
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder
 import net.fabricmc.fabric.api.event.registry.RegistryEntryAddedCallback
@@ -26,6 +27,7 @@ class AdamantineMod : ModInitializer {
         val MOD_ITEM_GROUP: ItemGroup = FabricItemGroupBuilder.create(Identifier(MODID, "general")).build()
 
         val adamantineOre = AdamantineOre()
+        val adamantineIngot = AdamantineIngot()
     }
 
     override fun onInitialize() {
@@ -34,6 +36,9 @@ class AdamantineMod : ModInitializer {
         Registry.BIOME.forEach { generateAdamantineOre(it) }
         RegistryEntryAddedCallback.event(Registry.BIOME)
             .register(RegistryEntryAddedCallback { _, _, biome -> generateAdamantineOre(biome) })
+
+        // Adamantine Ingot
+        registerItem(adamantineIngot, AdamantineIngot.LABEL)
     }
 
     private fun registerBlock(block: Block, label: String) {
@@ -43,6 +48,10 @@ class AdamantineMod : ModInitializer {
             Identifier(MODID, label),
             BlockItem(block, Item.Settings().group(MOD_ITEM_GROUP))
         )
+    }
+
+    private fun registerItem(item: Item, label: String) {
+        Registry.register(Registry.ITEM, Identifier(MODID, label), item)
     }
 
     private fun generateAdamantineOre(biome: Biome) {

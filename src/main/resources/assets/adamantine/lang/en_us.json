@@ -1,4 +1,5 @@
 {
   "itemGroup.adamantine.general": "Adamantine",
-  "block.adamantine.adamantine_ore": "Adamantine Ore"
+  "block.adamantine.adamantine_ore": "Adamantine Ore",
+  "item.adamantine.adamantine_ingot": "Adamantine Ingot"
 }
