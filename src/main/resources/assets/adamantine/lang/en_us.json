@@ -1,5 +1,9 @@
 {
   "itemGroup.adamantine.general": "Adamantine",
   "block.adamantine.adamantine_ore": "Adamantine Ore",
-  "item.adamantine.adamantine_ingot": "Adamantine Ingot"
+  "item.adamantine.adamantine_ingot": "Adamantine Ingot",
+  "item.adamantine.adamantine_helmet": "Adamantine Helmet",
+  "item.adamantine.adamantine_chestplate": "Adamantine Chestplate",
+  "item.adamantine.adamantine_leggings": "Adamantine Leggings",
+  "item.adamantine.adamantine_boots": "Adamantine Boots"
 }

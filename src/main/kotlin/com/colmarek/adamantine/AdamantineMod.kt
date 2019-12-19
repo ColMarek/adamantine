@@ -1,5 +1,6 @@
 package com.colmarek.adamantine
 
+import com.colmarek.adamantine.armor.AdamantineArmorMaterial
 import com.colmarek.adamantine.blocks.AdamantineOre
 import com.colmarek.adamantine.items.AdamantineIngot
 import net.fabricmc.api.ModInitializer
@@ -7,6 +8,8 @@ import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder
 import net.fabricmc.fabric.api.event.registry.RegistryEntryAddedCallback
 import net.minecraft.block.Block
 import net.minecraft.block.BlockState
+import net.minecraft.entity.EquipmentSlot
+import net.minecraft.item.ArmorItem
 import net.minecraft.item.BlockItem
 import net.minecraft.item.Item
 import net.minecraft.item.ItemGroup
@@ -28,6 +31,12 @@ class AdamantineMod : ModInitializer {
 
         val adamantineOre = AdamantineOre()
         val adamantineIngot = AdamantineIngot()
+
+        private val adamantineArmorMaterial = AdamantineArmorMaterial()
+        val adamantineHelmet = ArmorItem(adamantineArmorMaterial, EquipmentSlot.HEAD, Item.Settings().group(MOD_ITEM_GROUP))
+        val adamantineChestplate = ArmorItem(adamantineArmorMaterial, EquipmentSlot.CHEST, Item.Settings().group(MOD_ITEM_GROUP))
+        val adamantineLeggings = ArmorItem(adamantineArmorMaterial, EquipmentSlot.LEGS, Item.Settings().group(MOD_ITEM_GROUP))
+        val adamantineBoots = ArmorItem(adamantineArmorMaterial, EquipmentSlot.FEET, Item.Settings().group(MOD_ITEM_GROUP))
     }
 
     override fun onInitialize() {
@@ -39,6 +48,12 @@ class AdamantineMod : ModInitializer {
 
         // Adamantine Ingot
         registerItem(adamantineIngot, AdamantineIngot.LABEL)
+
+        // Adamantine Armor
+        registerItem(adamantineHelmet, "adamantine_helmet")
+        registerItem(adamantineChestplate, "adamantine_chestplate")
+        registerItem(adamantineLeggings, "adamantine_leggings")
+        registerItem(adamantineBoots, "adamantine_boots")
     }
 
     private fun registerBlock(block: Block, label: String) {
