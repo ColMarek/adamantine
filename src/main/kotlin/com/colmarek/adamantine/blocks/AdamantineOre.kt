@@ -28,5 +28,8 @@ class AdamantineOre : OreBlock(
         const val MIN_Y_LEVEL = 0
         const val MAX_Y_LEVEL = 16
         const val SIZE_OF_VEIN = 4
+
+        // Drop from other ores
+        const val CHANCE_DROP_FROM_DIAMOND_ORE = 2
     }
 }

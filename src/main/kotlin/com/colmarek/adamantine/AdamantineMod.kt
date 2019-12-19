@@ -3,9 +3,12 @@ package com.colmarek.adamantine
 import com.colmarek.adamantine.armor.AdamantineArmorMaterial
 import com.colmarek.adamantine.blocks.AdamantineOre
 import com.colmarek.adamantine.items.AdamantineIngot
+import com.colmarek.adamantine.utils.ChanceLootTableRange
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder
 import net.fabricmc.fabric.api.event.registry.RegistryEntryAddedCallback
+import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder
+import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback
 import net.minecraft.block.Block
 import net.minecraft.block.BlockState
 import net.minecraft.entity.EquipmentSlot
@@ -13,6 +16,7 @@ import net.minecraft.item.ArmorItem
 import net.minecraft.item.BlockItem
 import net.minecraft.item.Item
 import net.minecraft.item.ItemGroup
+import net.minecraft.loot.entry.ItemEntry
 import net.minecraft.util.Identifier
 import net.minecraft.util.registry.Registry
 import net.minecraft.world.biome.Biome
@@ -45,6 +49,16 @@ class AdamantineMod : ModInitializer {
         Registry.BIOME.forEach { generateAdamantineOre(it) }
         RegistryEntryAddedCallback.event(Registry.BIOME)
             .register(RegistryEntryAddedCallback { _, _, biome -> generateAdamantineOre(biome) })
+        // Chance to drop from Diamond Ore
+        val diamondOreIdentifier = Identifier("minecraft", "blocks/diamond_ore")
+        LootTableLoadingCallback.EVENT.register(LootTableLoadingCallback{_, _, id, supplier, _ ->
+            if (diamondOreIdentifier == id){
+                val poolBuilder = FabricLootPoolBuilder.builder()
+                    .withRolls(ChanceLootTableRange(AdamantineOre.CHANCE_DROP_FROM_DIAMOND_ORE))
+                    .withEntry(ItemEntry.builder(adamantineOre))
+                supplier.withPool(poolBuilder)
+            }
+        })
 
         // Adamantine Ingot
         registerItem(adamantineIngot, AdamantineIngot.LABEL)
