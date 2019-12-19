@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "adamantine",
+  "version": "${version}",
+  "name": "Adamantine",
+  "description": "A small mod that adds adamantine tools and armor.",
+  "authors": [
+    "ColMarek"
+  ],
+  "contact": {
+    "homepage": "https://github.com/ColMarek",
+    "sources": "https://github.com/ColMarek"
+  },
+  "license": "MIT",
+  "icon": "assets/adamantine/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.colmarek.adamantine.AdamantineMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.7.1",
+    "fabric": "*",
+    "fabric-language-kotlin": "*",
+    "minecraft": "1.15.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
