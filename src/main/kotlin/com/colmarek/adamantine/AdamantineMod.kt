@@ -31,7 +31,9 @@ import net.minecraft.world.gen.feature.OreFeatureConfig
 class AdamantineMod : ModInitializer {
     companion object {
         const val MODID = "adamantine"
-        val MOD_ITEM_GROUP: ItemGroup = FabricItemGroupBuilder.create(Identifier(MODID, "general")).build()
+        val MOD_ITEM_GROUP: ItemGroup = FabricItemGroupBuilder.create(Identifier(MODID, "general"))
+            .icon { ItemStack(adamantineIngot) }
+            .build()
 
         val adamantineOre = AdamantineOre()
         val adamantineIngot = AdamantineIngot()
