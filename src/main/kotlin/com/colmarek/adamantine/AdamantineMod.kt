@@ -3,6 +3,9 @@ package com.colmarek.adamantine
 import com.colmarek.adamantine.armor.AdamantineArmorMaterial
 import com.colmarek.adamantine.blocks.AdamantineOre
 import com.colmarek.adamantine.items.AdamantineIngot
+import com.colmarek.adamantine.items.tools.AdamantinePickaxe
+import com.colmarek.adamantine.items.tools.AdamantineSword
+import com.colmarek.adamantine.items.tools.AdamantineToolMaterial
 import com.colmarek.adamantine.utils.ChanceLootTableRange
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder
@@ -12,10 +15,7 @@ import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback
 import net.minecraft.block.Block
 import net.minecraft.block.BlockState
 import net.minecraft.entity.EquipmentSlot
-import net.minecraft.item.ArmorItem
-import net.minecraft.item.BlockItem
-import net.minecraft.item.Item
-import net.minecraft.item.ItemGroup
+import net.minecraft.item.*
 import net.minecraft.loot.entry.ItemEntry
 import net.minecraft.util.Identifier
 import net.minecraft.util.registry.Registry
@@ -41,6 +41,10 @@ class AdamantineMod : ModInitializer {
         val adamantineChestplate = ArmorItem(adamantineArmorMaterial, EquipmentSlot.CHEST, Item.Settings().group(MOD_ITEM_GROUP))
         val adamantineLeggings = ArmorItem(adamantineArmorMaterial, EquipmentSlot.LEGS, Item.Settings().group(MOD_ITEM_GROUP))
         val adamantineBoots = ArmorItem(adamantineArmorMaterial, EquipmentSlot.FEET, Item.Settings().group(MOD_ITEM_GROUP))
+
+        val adamantineToolMaterial = AdamantineToolMaterial()
+        val adamantineSword = AdamantineSword()
+        val adamantinePickaxe = AdamantinePickaxe()
     }
 
     override fun onInitialize() {
@@ -68,6 +72,10 @@ class AdamantineMod : ModInitializer {
         registerItem(adamantineChestplate, "adamantine_chestplate")
         registerItem(adamantineLeggings, "adamantine_leggings")
         registerItem(adamantineBoots, "adamantine_boots")
+
+        // Tools
+        registerItem(adamantineSword, "adamantine_sword")
+        registerItem(adamantinePickaxe, "adamantine_pickaxe")
     }
 
     private fun registerBlock(block: Block, label: String) {
