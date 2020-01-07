@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "I I",
+    "   "
+  ],
+  "key": {
+    "I": {
+      "item": "adamantine:adamantine_ingot"
+    }
+  },
+  "result": {
+    "item": "adamantine:adamantine_helmet",
+    "count": 1
+  }
+}
