@@ -4,6 +4,7 @@ import com.colmarek.adamantine.armor.AdamantineArmorMaterial
 import com.colmarek.adamantine.blocks.AdamantineOre
 import com.colmarek.adamantine.items.AdamantineIngot
 import com.colmarek.adamantine.items.tools.AdamantinePickaxe
+import com.colmarek.adamantine.items.tools.AdamantineShovel
 import com.colmarek.adamantine.items.tools.AdamantineSword
 import com.colmarek.adamantine.items.tools.AdamantineToolMaterial
 import com.colmarek.adamantine.utils.ChanceLootTableRange
@@ -47,6 +48,7 @@ class AdamantineMod : ModInitializer {
         val adamantineToolMaterial = AdamantineToolMaterial()
         val adamantineSword = AdamantineSword()
         val adamantinePickaxe = AdamantinePickaxe()
+        val adamantineShovel = AdamantineShovel()
     }
 
     override fun onInitialize() {
@@ -78,6 +80,7 @@ class AdamantineMod : ModInitializer {
         // Tools
         registerItem(adamantineSword, "adamantine_sword")
         registerItem(adamantinePickaxe, "adamantine_pickaxe")
+        registerItem(adamantineShovel, "adamantine_shovel")
     }
 
     private fun registerBlock(block: Block, label: String) {
