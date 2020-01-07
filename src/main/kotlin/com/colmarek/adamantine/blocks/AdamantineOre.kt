@@ -1,9 +1,14 @@
 package com.colmarek.adamantine.blocks
 
+import com.colmarek.adamantine.utils.ChanceLootTableRange
 import net.fabricmc.fabric.api.block.FabricBlockSettings
+import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder
+import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback
 import net.fabricmc.fabric.api.tools.FabricToolTags
 import net.minecraft.block.Material
 import net.minecraft.block.OreBlock
+import net.minecraft.loot.entry.ItemEntry
+import net.minecraft.util.Identifier
 
 class AdamantineOre : OreBlock(
     FabricBlockSettings.of(Material.STONE)
@@ -12,7 +17,7 @@ class AdamantineOre : OreBlock(
         .lightLevel(LIGHT_LEVEL)
         .strength(HARDNESS, RESISTANCE)
         .build()
-){
+) {
     companion object {
         const val LABEL = "adamantine_ore"
 
@@ -31,5 +36,18 @@ class AdamantineOre : OreBlock(
 
         // Drop from other ores
         const val CHANCE_DROP_FROM_DIAMOND_ORE = 2
+    }
+
+    init {
+        val diamondOreIdentifier = Identifier("minecraft", "blocks/diamond_ore")
+        // Add a chance to drop from Diamond Ore
+        LootTableLoadingCallback.EVENT.register(LootTableLoadingCallback { _, _, id, supplier, _ ->
+            if (id != diamondOreIdentifier) return@LootTableLoadingCallback
+
+            val poolBuilder = FabricLootPoolBuilder.builder()
+                .withRolls(ChanceLootTableRange(CHANCE_DROP_FROM_DIAMOND_ORE))
+                .withEntry(ItemEntry.builder(this))
+            supplier.withPool(poolBuilder)
+        })
     }
 }

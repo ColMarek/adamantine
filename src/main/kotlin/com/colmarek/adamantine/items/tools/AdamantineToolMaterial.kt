@@ -1,6 +1,6 @@
 package com.colmarek.adamantine.items.tools
 
-import com.colmarek.adamantine.AdamantineMod
+import com.colmarek.adamantine.items.ModItems
 import net.minecraft.item.ToolMaterial
 import net.minecraft.recipe.Ingredient
 
@@ -11,7 +11,7 @@ class AdamantineToolMaterial : ToolMaterial {
         const val ATTACK_DAMAGE = 5f
         const val MINING_LEVEL = 4
         const val ENCHANTABILITY = 15
-        val REPAIR_INGREDIENT: Ingredient = Ingredient.ofItems(AdamantineMod.adamantineIngot)
+        val REPAIR_INGREDIENT: Ingredient = Ingredient.ofItems(ModItems.adamantineIngot)
 
         val INSTANCE = AdamantineToolMaterial()
     }
