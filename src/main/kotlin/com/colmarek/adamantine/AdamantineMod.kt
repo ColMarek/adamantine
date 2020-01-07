@@ -3,10 +3,7 @@ package com.colmarek.adamantine
 import com.colmarek.adamantine.armor.AdamantineArmorMaterial
 import com.colmarek.adamantine.blocks.AdamantineOre
 import com.colmarek.adamantine.items.AdamantineIngot
-import com.colmarek.adamantine.items.tools.AdamantinePickaxe
-import com.colmarek.adamantine.items.tools.AdamantineShovel
-import com.colmarek.adamantine.items.tools.AdamantineSword
-import com.colmarek.adamantine.items.tools.AdamantineToolMaterial
+import com.colmarek.adamantine.items.tools.*
 import com.colmarek.adamantine.utils.ChanceLootTableRange
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder
@@ -49,6 +46,7 @@ class AdamantineMod : ModInitializer {
         val adamantineSword = AdamantineSword()
         val adamantinePickaxe = AdamantinePickaxe()
         val adamantineShovel = AdamantineShovel()
+        val adamantineAxe = AdamantineAxe()
     }
 
     override fun onInitialize() {
@@ -81,6 +79,7 @@ class AdamantineMod : ModInitializer {
         registerItem(adamantineSword, "adamantine_sword")
         registerItem(adamantinePickaxe, "adamantine_pickaxe")
         registerItem(adamantineShovel, "adamantine_shovel")
+        registerItem(adamantineAxe, "adamantine_axe")
     }
 
     private fun registerBlock(block: Block, label: String) {
