@@ -47,6 +47,7 @@ class AdamantineMod : ModInitializer {
         val adamantinePickaxe = AdamantinePickaxe()
         val adamantineShovel = AdamantineShovel()
         val adamantineAxe = AdamantineAxe()
+        val adamantineHoe = AdamantineHoe()
     }
 
     override fun onInitialize() {
@@ -80,6 +81,7 @@ class AdamantineMod : ModInitializer {
         registerItem(adamantinePickaxe, "adamantine_pickaxe")
         registerItem(adamantineShovel, "adamantine_shovel")
         registerItem(adamantineAxe, "adamantine_axe")
+        registerItem(adamantineHoe, "adamantine_hoe")
     }
 
     private fun registerBlock(block: Block, label: String) {
