@@ -46,11 +46,12 @@ fun generateInBiome(
         minYLevel,
         maxYLevel
     )
-    val configuredFeature = ConfiguredFeature(
+    val configuredFeature = Biome.configureFeature(
         Feature.ORE,
-        OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, blockState, sizeOfVein)
+        OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, blockState, sizeOfVein),
+        Decorator.COUNT_RANGE,
+        rangeDecoratorConfig
     )
-        .createDecoratedFeature(Decorator.COUNT_RANGE.configure(rangeDecoratorConfig))
 
     if (biome.category != Biome.Category.NETHER && biome.category != Biome.Category.THEEND) {
         biome.addFeature(

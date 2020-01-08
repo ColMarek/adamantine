@@ -8,7 +8,7 @@ import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback
 import net.fabricmc.fabric.api.tools.FabricToolTags
 import net.minecraft.block.Material
 import net.minecraft.block.OreBlock
-import net.minecraft.loot.entry.ItemEntry
+import net.minecraft.world.loot.entry.ItemEntry
 import net.minecraft.util.Identifier
 
 class AdamantineOre : OreBlock(

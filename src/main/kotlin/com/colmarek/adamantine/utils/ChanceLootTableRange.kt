@@ -1,6 +1,6 @@
 package com.colmarek.adamantine.utils
 
-import net.minecraft.loot.LootTableRange
+import net.minecraft.world.loot.LootTableRange
 import net.minecraft.util.Identifier
 import java.util.*
 
