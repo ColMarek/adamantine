@@ -1,5 +1,18 @@
 # Adamantine
 
-A small mod that adds adamantine tools and armor.
+[![Versions](https://cf.way2muchnoise.eu/versions/adamantine.svg)](https://www.curseforge.com/minecraft/mc-mods/adamantine)
+[![Downloads](https://cf.way2muchnoise.eu/adamantine.svg)](https://www.curseforge.com/minecraft/mc-mods/adamantine)
 
-For Minecraft 1.15.1.
+A small mod that adds adamantine tools and armor. 
+
+For Minecraft 1.15 and 1.14.4
+
+- Adamantine Sword
+- Adamantine Pickaxe
+- Adamantine Shovel
+- Adamantine Axe
+- Adamantine Hoe
+- Adamantine Helmet
+- Adamantine Chestplate
+- Adamantine Leggings
+- Adamantine Boots
