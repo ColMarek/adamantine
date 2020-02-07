@@ -16,3 +16,8 @@ For Minecraft 1.15 and 1.14.4
 - Adamantine Chestplate
 - Adamantine Leggings
 - Adamantine Boots
+
+## Contributors
+
+[ruchom4u](https://github.com/ruchom4u)
+- Spanish translation
