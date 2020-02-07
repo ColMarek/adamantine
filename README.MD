@@ -1,7 +1,7 @@
 # Adamantine
 
-[![Versions](https://cf.way2muchnoise.eu/versions/adamantine.svg)](https://www.curseforge.com/minecraft/mc-mods/adamantine)
-[![Downloads](https://cf.way2muchnoise.eu/adamantine.svg)](https://www.curseforge.com/minecraft/mc-mods/adamantine)
+[![Versions](http://cf.way2muchnoise.eu/versions/adamantine.svg)](https://www.curseforge.com/minecraft/mc-mods/adamantine)
+[![Downloads](http://cf.way2muchnoise.eu/adamantine.svg)](https://www.curseforge.com/minecraft/mc-mods/adamantine)
 
 A small mod that adds adamantine tools and armor. 
 
