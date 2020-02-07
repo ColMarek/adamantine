@@ -15,8 +15,9 @@
     }
   ],
   "contact": {
-    "homepage": "https://github.com/ColMarek",
-    "sources": "https://github.com/ColMarek"
+    "homepage": "https://github.com/ColMarek/adamantine",
+    "sources": "https://github.com/ColMarek/adamantine",
+    "issues": "https://github.com/ColMarek/adamantine/issues"
   },
   "license": "MIT",
   "icon": "assets/adamantine/icon.png",
