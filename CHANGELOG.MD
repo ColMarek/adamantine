@@ -1,5 +1,9 @@
 # Adamantine Changelog
 
+## 1.1.1
+
+- Add Spanish translation
+
 ## 1.1.0
 
 - Change mod icon
