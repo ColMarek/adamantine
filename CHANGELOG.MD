@@ -1,5 +1,11 @@
 # Adamantine Changelog
 
+## 1.2.0
+
+- Fix inability to mine obsidian
+- Prevent ore being farmable from diamond ore  
+The ore will not drop when diamond ore is minded using silk touch. 
+
 ## 1.1.1
 
 - Add Spanish translation
