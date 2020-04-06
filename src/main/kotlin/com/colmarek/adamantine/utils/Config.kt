@@ -40,7 +40,7 @@ object Config {
         const val durability = 1800
         const val miningSpeed = 24f
         const val attackDamage = 5f
-        const val miningLevel = 4
+        const val miningLevel = 3
         const val enchantability = 15
     }
 
