@@ -25,7 +25,7 @@ object Config {
         const val sizeOfVein = 4
 
         // Drop from other ores
-        const val chanceDropFromDiamondOre = 2
+        const val chanceDropFromDiamondOre = 20
     }
 
     object AdamantineArmorMaterial {

@@ -6,7 +6,7 @@ import java.util.*
 
 /**
  * Percentage based Loot Table Range.
- * @param chance The x/10 change to drop an item e.g. 2 => 20%
+ * @param chance The percentage chance to drop an item e.g. 20 => 20%
  */
 class ChanceLootTableRange(private val chance: Int) : LootTableRange {
     override fun next(random: Random): Int {
@@ -18,6 +18,6 @@ class ChanceLootTableRange(private val chance: Int) : LootTableRange {
     }
 
     private fun generate(random: Random = Random()): Boolean {
-        return random.nextInt(10) + 1 <= chance // + 1 to exclude zero
+        return random.nextInt(100) <= chance
     }
 }
