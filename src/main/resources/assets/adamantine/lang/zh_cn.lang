@@ -1,0 +1,14 @@
+{
+  "itemGroup.adamantine.general": "精金",
+  "block.adamantine.adamantine_ore": "精金矿石",
+  "item.adamantine.adamantine_ingot": "精金锭",
+  "item.adamantine.adamantine_helmet": "精金头盔",
+  "item.adamantine.adamantine_chestplate": "精金胸甲",
+  "item.adamantine.adamantine_leggings": "精金护腿",
+  "item.adamantine.adamantine_boots": "精金靴子",
+  "item.adamantine.adamantine_sword": "精金剑",
+  "item.adamantine.adamantine_pickaxe": "精金镐",
+  "item.adamantine.adamantine_shovel": "精金锹",
+  "item.adamantine.adamantine_axe": "精金斧",
+  "item.adamantine.adamantine_hoe": "精金锄"
+}
